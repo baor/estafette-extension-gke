@@ -180,7 +180,7 @@ func main() {
 	}
 	runCommand("gcloud", clustersGetCredentialsArsgs)
 
-	if params.Action == "deploy-babysit"{
+	if params.Action == "deploy-babysit" {
 		paramsCopy := params
 		paramsCopy.Action = "deploy-canary"
 		templateData, tmpl := generateKubernetesYaml(paramsCopy)
