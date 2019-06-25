@@ -185,7 +185,7 @@ func main() {
 		paramsCopy.Action = "deploy-canary"
 		templateData, tmpl := generateKubernetesYaml(paramsCopy)
 		applyKubernetesYaml(paramsCopy, templateData, tmpl)
-		//TODO check if canary is OK
+		// TODO check if canary is OK
 		// deploy-stable
 		paramsCopy.Action = "rollback-canary"
 		templateData2, tmpl2 := generateKubernetesYaml(paramsCopy)
@@ -194,7 +194,6 @@ func main() {
 		templateData, tmpl := generateKubernetesYaml(params)
 		applyKubernetesYaml(params, templateData, tmpl)
 	}
-
 }
 
 func generateKubernetesYaml(params Params) (TemplateData, *template.Template) {
